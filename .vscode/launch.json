@@ -1,0 +1,39 @@
+{
+   // Use IntelliSense to find out which attributes exist for C# debugging
+   // Use hover for the description of the existing attributes
+   // For further information visit https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger-launchjson.md
+   "version": "0.2.0",
+   "configurations": [
+        {
+            "name": ".NET Core Launch (Blazor Standalone)",
+            "type": "coreclr",
+            "request": "launch",
+            "program": "dotnet",
+            "args": ["run"],
+            "cwd": "${workspaceFolder}/BlazorApp1",
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            },
+            "preLaunchTask": "build"
+        },
+        {
+            "name": ".NET Core Debug Blazor (Chrome)",
+            "type": "pwa-chrome",
+            "request": "launch",
+            "timeout": 30000,
+            "url": "http://localhost:5000",
+            "webRoot": "${workspaceFolder}/BlazorApp1",
+            "inspectUri": "{wsProtocol}://{url.hostname}:{url.port}/_framework/debug/ws-proxy?browser={browserInspectUri}"
+        },
+        {
+            "name": ".NET Core Debug Blazor (Edge)",
+            "type": "pwa-msedge",
+            "runtimeExecutable": "dev",
+            "request": "launch",
+            "timeout": 30000,
+            "url": "http://localhost:5000",
+            "webRoot": "${workspaceFolder}/BlazorApp1",
+            "inspectUri": "{wsProtocol}://{url.hostname}:{url.port}/_framework/debug/ws-proxy?browser={browserInspectUri}"
+        }
+    ]
+}
